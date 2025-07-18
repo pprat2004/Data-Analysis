@@ -25,21 +25,21 @@ The dataset used is `data_jobs.csv`, which contains job postings scraped from mu
 
 ---
 
-## 🔍 What This Project Does
+# 🔍 What This Project Does
 
-## 1. 🇮🇳 Focus on Indian Job Listings
+### 1. 🇮🇳 Focus on Indian Job Listings
 Filters data to only include jobs from **India** for focused analysis.
 
-## 2. 💥 Skill Frequency Analysis
+### 2. 💥 Skill Frequency Analysis
 - Explodes the `job_skills` list so each skill becomes a row.
 - Groups by both `job_skills` and `job_title_short` to count how many times each skill appears per role.
 
-## 3. 📊 Visualization 1: **Top 5 Most Common Skills per Job Title**
+### 3. 📊 Visualization 1: **Top 5 Most Common Skills per Job Title**
 - Picks the top 3 job titles with the most listings.
 - For each, plots the **top 5 most frequently mentioned skills**.
 - Uses horizontal bar charts for better readability.
 
-## 4. 📈 Visualization 2: **Skill Percentage Likelihood**
+### 4. 📈 Visualization 2: **Skill Percentage Likelihood**
 - Normalizes skill mentions by dividing `skill_count` by total jobs for that title.
 - Plots **likelihood (%)** that a job of a certain title will request a given skill.
 - Adds percentage labels next to each bar.
@@ -55,7 +55,7 @@ Filters data to only include jobs from **India** for focused analysis.
 
 ## Insight
 
-📊 Plot 1: Counts of Skills Requested in Indian Job Postings
+### 📊 Plot 1: Counts of Skills Requested in Indian Job Postings
 This chart shows raw frequency of skill mentions in the top 3 most common job titles.
 
 ✅ Data Analyst:
@@ -77,7 +77,7 @@ SQL and R are still relevant.
 
 Cloud and visualization tools like AWS and Tableau show modest demand.
 
-📈 Plot 2: Likelihood of Skills Requested (%-based Normalized View)
+### 📈 Plot 2: Likelihood of Skills Requested (%-based Normalized View)
 This plot normalizes skill counts by the total number of job postings for each role, giving a true sense of how likely a skill is to appear in a posting for that role.
 
 ✅ Data Analyst:
@@ -101,7 +101,7 @@ SQL is also important (47.9%), followed by R at 32.6%.
 
 Cloud & BI tools like AWS (19.4%) and Tableau (18.3%) trail behind, indicating they're desirable but not mandatory.
 
-### 📈 Monthly Trends of Top Skills in Data Analyst Jobs (India)
+# 📈 Monthly Trends of Top Skills in Data Analyst Jobs (India)
 This part of the analysis explores how the demand for key skills changes across months in 2023 for Data Analyst roles in India.
 
 ## 🔄 How It Works
@@ -124,3 +124,55 @@ A line chart is plotted to show how the importance of each skill trends across t
 
 ## Insight
 SQL consistently remained the most in-demand skill for Data Analyst roles in India throughout 2023, appearing in over 50% of job postings. Python and Excel followed closely, with Python peaking mid-year. Tableau and Power BI had lower but gradually increasing mentions, indicating growing interest in data visualization tools.
+
+# 📊 Salary Distributions of Data Jobs in India
+This section visualizes the salary distributions of the top 6 most common data-related job roles in India using a boxplot.
+
+## ✅ Objective:
+To compare the yearly salary ranges across different job titles in the Indian data job market.
+
+## 🧪 Methodology:
+Filtered the dataset for job listings located in India with non-null salary data.
+
+Identified the top 6 most frequent job titles:
+
+Data Engineer
+
+Data Analyst
+
+Data Scientist
+
+Machine Learning Engineer
+
+Senior Data Engineer
+
+Software Engineer
+
+Used a boxplot to visualize the salary distributions of these roles.
+
+Ordered the job titles by their median salary, highest to lowest.
+
+## 📈 Output:
+Boxplot showing median, interquartile range, and outliers for each role.
+
+Salary axis limited to $600K for clarity.
+
+X-axis formatted in thousands of USD for better readability.
+
+![Salary Analysis](3.project/images/salary_analysis.png)
+
+
+## Insight: Salary Distributions of Data Jobs in India
+Machine Learning Engineers show the widest salary range, indicating variability in pay based on experience and company.
+
+Senior Data Engineers have a high concentration of salaries around the upper range, but with minimal spread, possibly due to standardized pay at senior levels.
+
+Data Engineers and Data Scientists earn comparable median salaries, with Data Engineers slightly ahead.
+
+Data Analysts have the lowest median salary, suggesting this is typically an entry-level role.
+
+Software Engineers in the data domain seem to have a tighter distribution, mostly around the lower-mid salary range.
+
+This visualization gives a clear sense of how compensation varies by role, helping job seekers and analysts benchmark expectations across positions.
+
+
